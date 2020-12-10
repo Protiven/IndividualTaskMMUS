@@ -8,3 +8,11 @@ https://dsp.stackexchange.com/questions/3126/when-to-use-ekf-and-when-kalman-fil
 http://sun.tsu.ru/mminfo/2016/Dombrovski/book/chapter-6/chapter-6-6.htm
 https://habr.com/ru/post/166693/
 https://www.science-education.ru/ru/article/view?id=19453
+http://www.isa.ru/jitcs/images/documents/2013-04/90_112.pdf с 14
+https://www.keldysh.ru/papers/2009/prep48/prep2009_48.pdf
+
+http://www.ict.nsc.ru/jct/content/t21n4/Kulikova_n_av.pdf
+
+https://www.youtube.com/watch?v=m5Bw1m8jJuY&ab_channel=CppMonk
+https://www.youtube.com/watch?v=0M8R0IVdLOI&ab_channel=BehnamAsadi больше подходит
+http://ros-developer.com/2019/04/11/extended-kalman-filter-explained-with-python-code/ расширенный фильтр Калмана на питоне
