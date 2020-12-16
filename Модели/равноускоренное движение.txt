@@ -1,0 +1,30 @@
+import numpy as np
+
+dt = 1
+N = 500
+t = np.empty(N)
+
+f = lambda x, t: np.array([x[0] + x[1] * t + 10 * t **2/2,
+                           x[1] + 10 * t])
+
+df = lambda x, t: np.array([[1, t],
+                           [0, 1]])
+
+h = lambda x: np.array([x[0]])
+
+dh = lambda x: np.array([[1, 0]])
+
+G = np.array([0, 0.01])
+
+Q = 50
+
+R = np.matrix([[500000]])
+
+
+x_1 = np.empty(2)
+P_1 = np.zeros((2, 2))
+filterMassive = np.zeros((N, 2))
+
+x_0 = np.array([0, 2])
+P_0 = np.array([[1000 , 0],
+                [0, 1000]])

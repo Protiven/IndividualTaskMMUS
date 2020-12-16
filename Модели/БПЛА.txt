@@ -1,0 +1,41 @@
+import numpy as np
+import math as mth
+
+dt = 2
+N = 5000
+t = np.empty(N)
+
+f = lambda x, t: np.array([x[0] + x[4] * t *mth.cos(x[2]),
+                           x[1] + x[4] * t *mth.sin(x[2]),
+                           x[2] + x[3] * t,
+                           x[3],
+                           x[4]])
+
+df = lambda x, t: np.array([[1, 0, 0, 0,  t * mth.cos(x[2])],
+                           [0, 1, 0, 0, t * mth.sin(x[2])],
+                           [0, 0, 1, t, 0],
+                           [0, 0, 0, 1, 0],
+                           [0, 0, 0, 0, 1]])
+
+h = lambda x: np.array([x[0]])
+
+dh = lambda x: np.array([[1, 0, 0, 0, 0]])
+
+G = np.array([0, 0, 0, 0.01, 0.03])
+
+Q = 0
+
+R = np.matrix([[1500]])
+
+
+x_1 = np.empty(5)
+P_1 = np.zeros((5, 5))
+filterMassive = np.zeros((N, 5))
+
+
+x_0 = np.array([0, 0, 0, 0.001, 5])
+P_0 = np.array([[10, 0, 0, 0, 0],
+                [0, 10, 0, 0, 0],
+               [0, 0, 10, 0, 0],
+               [0, 0, 0, 10000, 0],
+               [0, 0, 0, 0, 10000]])
